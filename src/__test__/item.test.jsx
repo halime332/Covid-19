@@ -20,5 +20,5 @@ test("Gönderilen proplar doğru şekilde kullanıllır",()=>{
    screen.getByText("Toplam Vaka");
 
    //value propu ile gönderdiğimiz değer ekranda var mı?
-   screen.getByAltText("300,8M");
+   screen.getByText("300,8M");
 });
