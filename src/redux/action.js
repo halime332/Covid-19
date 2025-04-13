@@ -7,8 +7,9 @@ export const getDetails = createAsyncThunk(
     "/covid/ getDetails",
     async (country) => {
 
+        const formattedCountry = country.replaceAll(" ", "-");
         //api'lara atılacak istekleri belirle
-        const req1 = api.get("/statistics", { params: { country } });
+        const req1 = api.get("/statistics", { params: { country: formattedCountry }, });
 
         const req2 = axios.get(`https://restcountries.com/v3.1/name/${country}`);
 
@@ -16,18 +17,18 @@ export const getDetails = createAsyncThunk(
 
 
 
-        let data = responses[0].data.response[0];
+        let data = responses[0].data.response[0].cases;
+        console.log(data);
 
 
-        return;
 
         //veriyi formatla
         data = {
-            continent: data.continent,
+            continent: data?.continent,
             country: data.country,
             day: data.day,
             deaths: data.deaths.total,
-            populations: data.population,
+            population: data.population,
             tests: data.tests.total,
             flags: responses[1].data[0].flags,
         };

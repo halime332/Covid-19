@@ -3,7 +3,7 @@ import { getDetails } from "./action";
 
 
 const initialState = {
-    isLoading: true,
+    isLoading: false,
     error: null,
     data: null,
 };
@@ -16,14 +16,14 @@ const covidSlice = createSlice({
         builder.addCase(getDetails.pending, (state) => {
             state.isLoading = true;
         });
-        builder.addCase(getDetails.rejected, (state, { error }) => {
-            state.isLoading = false;
-            state.error = error.message;
-        });
         builder.addCase(getDetails.fulfilled, (state, { payload }) => {
             state.isLoading = false;
             state.error = null;
             state.data = payload;
+        });
+        builder.addCase(getDetails.rejected, (state, { error }) => {
+            state.isLoading = false;
+            state.error = error.message;
         });
 
     },

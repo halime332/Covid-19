@@ -6,7 +6,7 @@ import HeaderLoader from '../../components/loader/header-loader';
 
 const Heading = () => {
     const{isLoading,data} = useSelector((store)=>store.covidReducer);
- console.log(data);
+
   return (
     <div className='flex justify-between items-center'>
        
@@ -24,6 +24,8 @@ const Heading = () => {
             <h1 className="text-gray-900 text-2xl lg:text-3xl font-bold font-sans">
               {data.country}
             </h1>
+
+            <img src={data.flags?.png} alt={data.country} className='w-10 h-6 object-cover rounded' />
           </div>
         )
       )}
