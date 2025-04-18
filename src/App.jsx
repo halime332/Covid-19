@@ -6,7 +6,7 @@ import Layout from './components/layout';
 
 
 //route'ları tanımladık
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path:"/", element:<Layout/>,
     children:[

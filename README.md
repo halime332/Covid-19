@@ -17,3 +17,5 @@
 -API: https://rapidapi.com/api-sports/api/covid-193/playground/apiendpoint_2feca6f0-0f58-40b7-9196-98c45c7d5083
 
 - geoURL =" https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+<img src="screen.gif"/>

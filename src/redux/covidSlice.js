@@ -24,6 +24,7 @@ const covidSlice = createSlice({
         builder.addCase(getDetails.rejected, (state, { error }) => {
             state.isLoading = false;
             state.error = error.message;
+            state.data = null;
         });
 
     },

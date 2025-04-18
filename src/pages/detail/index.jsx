@@ -17,7 +17,7 @@ const Detail = () => {
  
   return (
     <div className='flex-1 text-white grid place-items-center p-6'>
-      <div className='bg-white border shadow-2xl min-h-[80%] py-6 px-8 rounded-lg  max-w-3xl max-md:w-full md:min-w-[500px]'>
+      <div className='bg-white border shadow-2xl min-h-[80%] py-6 px-8 rounded-lg  max-w-4xl max-md:w-full md:w-[80%]'>
        
        <Heading/>
        <Content/>

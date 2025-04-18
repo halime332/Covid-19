@@ -5,7 +5,9 @@ import { IoIosArrowBack } from "react-icons/io";
 import HeaderLoader from '../../components/loader/header-loader';
 
 const Heading = () => {
-    const{isLoading,data} = useSelector((store)=>store.covidReducer);
+    const{isLoading,data} = useSelector((store)=>store);
+    
+    
 
   return (
     <div className='flex justify-between items-center'>
@@ -25,7 +27,7 @@ const Heading = () => {
               {data.country}
             </h1>
 
-            <img src={data.flags?.png} alt={data.country} className='w-10 h-6 object-cover rounded' />
+            <img src={data.flags?.png} alt={data.flags.alt} className='drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] w-16 rounded' />
           </div>
         )
       )}
